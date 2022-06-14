@@ -1,0 +1,778 @@
+{
+    "nested": false,
+    "intents": [
+        "abbreviation",
+        "aircraft",
+        "airfare",
+        "airline",
+        "airport",
+        "capacity",
+        "cheapest",
+        "city",
+        "day_name",
+        "distance",
+        "flight",
+        "flight_no",
+        "flight_time",
+        "ground_fare",
+        "ground_service",
+        "meal",
+        "quantity",
+        "restriction"
+    ],
+    "entities_examples": {
+        "aircraft_code": [
+            "d9s",
+            "l10",
+            "747",
+            "100",
+            "f28",
+            "767",
+            "737",
+            "757",
+            "dh8",
+            "d10"
+        ],
+        "airline_code": [
+            "ea",
+            "kw",
+            "yx",
+            "hp",
+            "ff",
+            "aa",
+            "ua",
+            "twa",
+            "us",
+            "as"
+        ],
+        "airline_name": [
+            "delta airlines",
+            "lufthansa",
+            "continental airlines",
+            "canadian airlines international",
+            "midwest",
+            "usa air",
+            "united",
+            "air canada",
+            "american 's",
+            "us airlines"
+        ],
+        "airport_code": [
+            "ewr",
+            "lga",
+            "ord",
+            "lax",
+            "bwi",
+            "dfw",
+            "bur",
+            "phl",
+            "atl",
+            "tpa"
+        ],
+        "airport_name": [
+            "la guardia",
+            "general mitchell airport",
+            "nashville airport",
+            "dallas airport",
+            "general mitchell international",
+            "st. petersburg airport",
+            "denver airport",
+            "atlanta airport",
+            "salt lake city airport",
+            "baltimore airport"
+        ],
+        "arrive_date.date_relative": [
+            "next"
+        ],
+        "arrive_date.day_name": [
+            "monday",
+            "friday",
+            "sunday",
+            "thursday",
+            "saturday",
+            "thursdays",
+            "wednesday",
+            "saturdays",
+            "tuesday"
+        ],
+        "arrive_date.day_number": [
+            "twenty two",
+            "eighth",
+            "twelfth",
+            "ninth",
+            "twenty eighth",
+            "fifteenth",
+            "second",
+            "twenty seventh",
+            "fourth",
+            "twenty second"
+        ],
+        "arrive_date.month_name": [
+            "august",
+            "april",
+            "may",
+            "november",
+            "march",
+            "july",
+            "february",
+            "june"
+        ],
+        "arrive_date.today_relative": [
+            "tomorrow"
+        ],
+        "arrive_time.end_time": [
+            "43 pm",
+            "730 pm",
+            "5 pm",
+            "630 pm",
+            "515 pm",
+            "6 pm",
+            "530 pm",
+            "1 o'clock",
+            "1245 pm",
+            "1130 am"
+        ],
+        "arrive_time.period_mod": [
+            "early",
+            "earliest"
+        ],
+        "arrive_time.period_of_day": [
+            "late afternoon",
+            "lunch time",
+            "night",
+            "dinnertime",
+            "morning",
+            "afternoon",
+            "evening",
+            "midnight"
+        ],
+        "arrive_time.start_time": [
+            "3",
+            "5 pm",
+            "445",
+            "1030 am",
+            "1133 am",
+            "1115 am",
+            "6",
+            "8",
+            "1850",
+            "8 pm"
+        ],
+        "arrive_time.time": [
+            "9 o'clock am",
+            "3 o'clock pm",
+            "4 o'clock pm",
+            "evening",
+            "10 am",
+            "5 o'clock pm",
+            "9 am",
+            "1 pm",
+            "6",
+            "12 o'clock noon"
+        ],
+        "arrive_time.time_relative": [
+            "around",
+            "by",
+            "later",
+            "close",
+            "after",
+            "before",
+            "about",
+            "near",
+            "vicinity",
+            "no later than"
+        ],
+        "booking_class": [
+            "q"
+        ],
+        "city_name": [
+            "dallas",
+            "pittsburgh",
+            "dallas fort worth",
+            "fort worth",
+            "indianapolis",
+            "chicago",
+            "phoenix",
+            "san diego",
+            "new york city",
+            "cleveland"
+        ],
+        "class_type": [
+            "coach class",
+            "coach",
+            "first class",
+            "business class",
+            "first",
+            "economic",
+            "thrift"
+        ],
+        "compartment": [
+            "coach"
+        ],
+        "connect": [
+            "connecting",
+            "connects",
+            "connections",
+            "direct",
+            "connect"
+        ],
+        "cost_relative": [
+            "lowest",
+            "under",
+            "least expensive",
+            "lowest price",
+            "less",
+            "highest",
+            "cheapest",
+            "most expensive",
+            "not exceeding",
+            "lowest cost"
+        ],
+        "day_name": [
+            "monday",
+            "thursday",
+            "mondays",
+            "wednesday"
+        ],
+        "day_number": [
+            "seventh"
+        ],
+        "days_code": [
+            "sa"
+        ],
+        "depart_date.date_relative": [
+            "following",
+            "two",
+            "next",
+            "coming",
+            "same",
+            "this",
+            "after"
+        ],
+        "depart_date.day_name": [
+            "monday",
+            "friday",
+            "tuesdays",
+            "saturday",
+            "mondays",
+            "wednesdays",
+            "saturdays",
+            "fridays",
+            "sunday 's",
+            "wednesday 's"
+        ],
+        "depart_date.day_number": [
+            "twenty one",
+            "twenty ninth",
+            "twenty two",
+            "seventeenth",
+            "twenty",
+            "twenty six",
+            "eighth",
+            "eighteenth",
+            "twenty sixth",
+            "thirty first"
+        ],
+        "depart_date.month_name": [
+            "august",
+            "april",
+            "may",
+            "september",
+            "march",
+            "december",
+            "july",
+            "october",
+            "february",
+            "june"
+        ],
+        "depart_date.today_relative": [
+            "tomorrow",
+            "the day after tomorrow",
+            "tonight",
+            "today",
+            "this"
+        ],
+        "depart_date.year": [
+            "year",
+            "1993",
+            "1992",
+            "1994",
+            "1991"
+        ],
+        "depart_time.end_time": [
+            "2 pm",
+            "3 o'clock",
+            "8 pm",
+            "10 am",
+            "2",
+            "7 pm",
+            "9 pm",
+            "6 pm",
+            "5 o'clock",
+            "3 pm"
+        ],
+        "depart_time.period_mod": [
+            "early",
+            "late"
+        ],
+        "depart_time.period_of_day": [
+            "mornings",
+            "dinnertime",
+            "morning",
+            "evening",
+            "midnight",
+            "nights",
+            "afternoons",
+            "late afternoon",
+            "noon",
+            "pm"
+        ],
+        "depart_time.start_time": [
+            "1 o'clock",
+            "8",
+            "530",
+            "noon",
+            "2 pm",
+            "430",
+            "8 pm",
+            "10 am",
+            "6 pm",
+            "5"
+        ],
+        "depart_time.time": [
+            "10",
+            "3",
+            "615 pm",
+            "838 am",
+            "10 am",
+            "5 o'clock pm",
+            "10 o'clock pm",
+            "1220 pm",
+            "2 o'clock pm",
+            "1 pm"
+        ],
+        "depart_time.time_relative": [
+            "around",
+            "earlier",
+            "later",
+            "by",
+            "no later than",
+            "before",
+            "about",
+            "approximately",
+            "prior to",
+            "afterwards"
+        ],
+        "economy": [
+            "economy class",
+            "economy"
+        ],
+        "fare_amount": [
+            "150 dollars",
+            "466 dollars",
+            "415 dollars",
+            "200 dollars",
+            "100",
+            "416 dollars",
+            "124 dollars",
+            "1000 dollars",
+            "1288",
+            "932 dollars"
+        ],
+        "fare_basis_code": [
+            "bh",
+            "qx",
+            "qo",
+            "q fares",
+            "c",
+            "k",
+            "m",
+            "qw",
+            "q",
+            "b"
+        ],
+        "flight": [
+            "flight"
+        ],
+        "flight_days": [
+            "daily"
+        ],
+        "flight_mod": [
+            "arriving",
+            "weekdays",
+            "earliest",
+            "during the week",
+            "last",
+            "inexpensive",
+            "overnight",
+            "day time",
+            "shortest",
+            "earliest arriving"
+        ],
+        "flight_number": [
+            "3357",
+            "137338",
+            "608",
+            "417",
+            "4400",
+            "257",
+            "number",
+            "1500",
+            "324",
+            "21"
+        ],
+        "flight_stop": [
+            "stops",
+            "maximum number of stops",
+            "one stop",
+            "stopovers",
+            "directly",
+            "no stops",
+            "without stopping",
+            "nonstop",
+            "stop",
+            "nonstops"
+        ],
+        "flight_time": [
+            "schedule for flights",
+            "flight schedule",
+            "times of flight",
+            "schedule",
+            "times of your flights",
+            "time",
+            "flight times",
+            "times",
+            "when",
+            "time of arrival"
+        ],
+        "fromloc.airport_code": [
+            "oak",
+            "jfk",
+            "bwi",
+            "dfw",
+            "mco",
+            "sfo"
+        ],
+        "fromloc.airport_name": [
+            "la guardia",
+            "philadelphia airport",
+            "dallas fort worth international",
+            "toronto international airport",
+            "dallas airport",
+            "general mitchell international",
+            "orlando international",
+            "pittsburgh airport",
+            "orlando airport",
+            "denver airport"
+        ],
+        "fromloc.city_name": [
+            "dallas",
+            "pittsburgh",
+            "dallas fort worth",
+            "salt lake",
+            "phoenix",
+            "cleveland",
+            "chicago",
+            "indianapolis",
+            "new york city",
+            "fort worth"
+        ],
+        "fromloc.state_code": [
+            "dc"
+        ],
+        "fromloc.state_name": [
+            "missouri",
+            "minnesota",
+            "florida",
+            "quebec",
+            "colorado",
+            "california",
+            "ohio",
+            "texas",
+            "michigan",
+            "north carolina"
+        ],
+        "meal": [
+            "meal",
+            "meals"
+        ],
+        "meal_code": [
+            "s",
+            "d s",
+            "ls",
+            "meal code s",
+            "sb",
+            "sd d"
+        ],
+        "meal_description": [
+            "lunch",
+            "snack",
+            "dinner meal",
+            "supper",
+            "snacks",
+            "dinner",
+            "breakfast"
+        ],
+        "mod": [
+            "greatest",
+            "two",
+            "largest",
+            "closest",
+            "besides",
+            "doesn 't",
+            "same",
+            "total",
+            "least",
+            "more"
+        ],
+        "month_name": [
+            "july"
+        ],
+        "or": [
+            "or"
+        ],
+        "period_of_day": [
+            "morning",
+            "night",
+            "afternoon",
+            "evening"
+        ],
+        "restriction_code": [
+            "ap57",
+            "ap68",
+            "ap 20",
+            "ap 80",
+            "ap 55",
+            "ap80",
+            "ap",
+            "ap58",
+            "ap 57"
+        ],
+        "return_date.date_relative": [
+            "the following day",
+            "day",
+            "next",
+            "day after"
+        ],
+        "return_date.day_name": [
+            "sunday",
+            "thursday",
+            "saturday"
+        ],
+        "return_date.day_number": [
+            "sixth",
+            "twenty second",
+            "twelve"
+        ],
+        "return_date.month_name": [
+            "may",
+            "august",
+            "february"
+        ],
+        "return_date.today_relative": [
+            "the following day"
+        ],
+        "return_time.period_mod": [
+            "late"
+        ],
+        "return_time.period_of_day": [
+            "evening"
+        ],
+        "round_trip": [
+            "return",
+            "one way",
+            "back",
+            "round trip",
+            "round trips"
+        ],
+        "state_code": [
+            "dc"
+        ],
+        "state_name": [
+            "colorado",
+            "california",
+            "texas",
+            "arizona"
+        ],
+        "stoploc.airport_code": [
+            "dtw"
+        ],
+        "stoploc.airport_name": [
+            "hartfield"
+        ],
+        "stoploc.city_name": [
+            "houston",
+            "dallas",
+            "dallas fort worth",
+            "pittsburgh",
+            "phoenix",
+            "fort worth",
+            "chicago",
+            "indianapolis",
+            "nashville",
+            "washington"
+        ],
+        "stoploc.state_code": [
+            "dc"
+        ],
+        "time": [
+            "9 am",
+            "time"
+        ],
+        "time_relative": [
+            "around"
+        ],
+        "today_relative": [
+            "tomorrow",
+            "the day after tomorrow"
+        ],
+        "toloc.airport_code": [
+            "jfk",
+            "dtw",
+            "bwi",
+            "dfw",
+            "atl",
+            "sfo",
+            "lax"
+        ],
+        "toloc.airport_name": [
+            "la guardia",
+            "newark airport",
+            "general mitchell international",
+            "denver airport",
+            "o 'hare",
+            "san francisco international",
+            "dulles",
+            "logan airport",
+            "ontario international",
+            "san francisco airport"
+        ],
+        "toloc.city_name": [
+            "dallas",
+            "pittsburgh",
+            "dallas fort worth",
+            "philly",
+            "chicago",
+            "cleveland",
+            "indianapolis",
+            "phoenix",
+            "fort worth",
+            "san diego"
+        ],
+        "toloc.country_name": [
+            "canada"
+        ],
+        "toloc.state_code": [
+            "dc"
+        ],
+        "toloc.state_name": [
+            "florida",
+            "colorado",
+            "california",
+            "pennsylvania",
+            "north carolina",
+            "arizona",
+            "new jersey",
+            "indiana",
+            "washington",
+            "tennessee"
+        ],
+        "transport_type": [
+            "train",
+            "car rental",
+            "taxi service",
+            "taxi",
+            "car",
+            "air taxi operation",
+            "airport limousine",
+            "limo",
+            "rental car",
+            "limousine"
+        ]
+    },
+    "entities_map": {
+        "aircraft_code": null,
+        "airline_code": null,
+        "airline_name": null,
+        "airport_code": null,
+        "airport_name": null,
+        "arrive_date.date_relative": null,
+        "arrive_date.day_name": null,
+        "arrive_date.day_number": null,
+        "arrive_date.month_name": null,
+        "arrive_date.today_relative": null,
+        "arrive_time.end_time": null,
+        "arrive_time.period_mod": null,
+        "arrive_time.period_of_day": null,
+        "arrive_time.start_time": null,
+        "arrive_time.time": null,
+        "arrive_time.time_relative": null,
+        "booking_class": null,
+        "city_name": null,
+        "class_type": null,
+        "compartment": null,
+        "connect": null,
+        "cost_relative": null,
+        "day_name": null,
+        "day_number": null,
+        "days_code": null,
+        "depart_date.date_relative": null,
+        "depart_date.day_name": null,
+        "depart_date.day_number": null,
+        "depart_date.month_name": null,
+        "depart_date.today_relative": null,
+        "depart_date.year": null,
+        "depart_time.end_time": null,
+        "depart_time.period_mod": null,
+        "depart_time.period_of_day": null,
+        "depart_time.start_time": null,
+        "depart_time.time": null,
+        "depart_time.time_relative": null,
+        "economy": null,
+        "fare_amount": null,
+        "fare_basis_code": null,
+        "flight": null,
+        "flight_days": null,
+        "flight_mod": null,
+        "flight_number": null,
+        "flight_stop": null,
+        "flight_time": null,
+        "fromloc.airport_code": null,
+        "fromloc.airport_name": null,
+        "fromloc.city_name": null,
+        "fromloc.state_code": null,
+        "fromloc.state_name": null,
+        "meal": null,
+        "meal_code": null,
+        "meal_description": null,
+        "mod": null,
+        "month_name": null,
+        "or": null,
+        "period_of_day": null,
+        "restriction_code": null,
+        "return_date.date_relative": null,
+        "return_date.day_name": null,
+        "return_date.day_number": null,
+        "return_date.month_name": null,
+        "return_date.today_relative": null,
+        "return_time.period_mod": null,
+        "return_time.period_of_day": null,
+        "round_trip": null,
+        "state_code": null,
+        "state_name": null,
+        "stoploc.airport_code": null,
+        "stoploc.airport_name": null,
+        "stoploc.city_name": null,
+        "stoploc.state_code": null,
+        "time": null,
+        "time_relative": null,
+        "today_relative": null,
+        "toloc.airport_code": null,
+        "toloc.airport_name": null,
+        "toloc.city_name": null,
+        "toloc.country_name": null,
+        "toloc.state_code": null,
+        "toloc.state_name": null,
+        "transport_type": null
+    }
+}
