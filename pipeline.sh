@@ -31,11 +31,11 @@ python3 "part2_merge.py" "$BASE_ATIS" "$BASE_REST" "$RES_DIR/part2" "$MAPPER"
 printf "\n OK: part2_merge.py \n"
 
 
-# mkdir -p "$RES_DIR/part3/flair"
-# python3 "part3_train_flair.py" "$RES_DIR/part2/union_test.json" \
-# "$RES_DIR/part2/union_train.json" "$RES_DIR/part2/union_dev.json" "$RES_DIR/part3/flair"
+mkdir -p "$RES_DIR/part3/flair"
+python3 "part3_train_flair.py" "$RES_DIR/part2/union_test.json" \
+"$RES_DIR/part2/union_train.json" "$RES_DIR/part2/union_dev.json" "$RES_DIR/part3/flair"
 
-# printf "\n OK: part3_train_flair.py \n"
+printf "\n OK: part3_train_flair.py \n"
 
 # mkdir -p "$RES_DIR/part3/flair"
 python3 "part3_train_w2ner.py" "$RES_DIR/part2/union_test.json" \
