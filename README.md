@@ -9,4 +9,5 @@
 - [Отчет](report.pdf) о проделанной работе
 - [`data`](data) - папка с исходными датасетами
 - [`w2ner`](w2ner) - папка с моделью [W2NER](https://github.com/ljynlp/W2NER)
+- Полезные логи обучения моделей можно найти в [`res/part3/flair/log`](res/part3/flair/log) и в [`res/part3/w2ner/log`](res/part3/w2ner/log)
 
