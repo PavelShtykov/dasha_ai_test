@@ -2,13 +2,32 @@ import json
 import glob
 from collections import defaultdict
 from typing import Tuple
-
+import argparse
+import os
 
 def intersection(a: Tuple[int, int], b: Tuple[int, int]) -> bool:
     return not (b[1] < a[0] or a[1] < b[0])
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "atis",
+        help="path to atis dataset",
+        type=str,
+    )
+    parser.add_argument(
+        "rest",
+        help="path to rest8k dataset",
+        type=str,
+    )
+    parser.add_argument(
+        "res",
+        help="path to results",
+        type=str,
+    )
+    args = parser.parse_args()
+
     # --------ATIS--------
     atis_stat = {
         "nested": False,
@@ -17,7 +36,7 @@ if __name__ == "__main__":
         "entities_map": {}
     }
 
-    for path in glob.glob("./data/atis/*.json"):
+    for path in glob.glob(os.path.join(args.atis, "*.json")):
         with open(path, "r") as f:
             data = json.load(f)["rasa_nlu_data"]["common_examples"]
 
@@ -39,7 +58,7 @@ if __name__ == "__main__":
                 )
                 if any(map(lambda b: intersection(bound, b), curr_bounds)):
                     atis_stat["nested"] = True
-                    print(sent)
+                    print("NESTED:", sent)
                 curr_bounds.add(bound)
 
     # cast sets to list, sort and dump
@@ -53,7 +72,7 @@ if __name__ == "__main__":
         for k, v in sorted(atis_stat["entities_examples"].items())
     }
 
-    with open("res/part_1/atis.json", "w") as f:
+    with open(os.path.join(args.res, "atis.json"), "w") as f:
         json.dump(atis_stat, f, indent=4)
 
     # --------RESTAURANT----------
@@ -64,7 +83,7 @@ if __name__ == "__main__":
         "entities_map": {}
     }
 
-    for path in glob.glob("./data/restaurant8k/*"):
+    for path in glob.glob(os.path.join(args.rest, "*.json")):
         with open(path, "r") as f:
             data = json.load(f)
 
@@ -86,7 +105,7 @@ if __name__ == "__main__":
 
                     if any(map(lambda b: intersection(bound, b), curr_bounds)):
                         rest_stat["nested"] = True
-                        print(sent)
+                        print("NESTED: ", sent)
                     curr_bounds.append(bound)
 
                 rest_stat["entities_examples"].update(curr_entities)
@@ -102,5 +121,5 @@ if __name__ == "__main__":
         for k, v in sorted(rest_stat["entities_examples"].items())
     }
 
-    with open("res/part_1/rest.json", "w") as f:
+    with open(os.path.join(args.res, "rest.json"), "w") as f:
         json.dump(rest_stat, f, indent=4)

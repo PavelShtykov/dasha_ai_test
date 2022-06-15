@@ -3,9 +3,14 @@ import glob
 from typing import List, Tuple
 import argparse
 from collections import defaultdict
+import os
+from sklearn.model_selection import train_test_split
 
 
 def union_sentence(text: str, spans: List[Tuple[int, int, str]]) -> dict:
+    """
+    Create union-type sentence
+    """
     entities = [
         {
             "start": s[0],
@@ -41,7 +46,10 @@ def union_sentence(text: str, spans: List[Tuple[int, int, str]]) -> dict:
     }
 
 
-def atis_sentence(dataset: List[dict], mapping: dict) -> Tuple[str, List[Tuple[int, int, str]]]:
+def atis_sentences(dataset: List[dict], mapping: dict) -> Tuple[str, List[Tuple[int, int, str]]]:
+    """
+    Transform atis dataset to union-type dataset
+    """
     res = []
      
     for sent in dataset:
@@ -62,6 +70,9 @@ def atis_sentence(dataset: List[dict], mapping: dict) -> Tuple[str, List[Tuple[i
 
 
 def cross_intersection(ents: List[Tuple[int, int, str]]) -> bool:
+    """
+    Check cross intersection in list of intervals
+    """
     def intrs(a: Tuple[int, int], b: Tuple[int, int]) -> bool:
         return not (b[1] < a[0] or a[1] < b[0])
 
@@ -75,7 +86,10 @@ def cross_intersection(ents: List[Tuple[int, int, str]]) -> bool:
     return False
 
 
-def rest_sentence(dataset: List[dict], mapping: dict) -> Tuple[str, List[Tuple[int, int, str]]]:
+def rest_sentences(dataset: List[dict], mapping: dict) -> Tuple[str, List[Tuple[int, int, str]]]:
+    """
+    Transform restaurant8k dataset to union-typed dataset
+    """
     res = []
 
     for sent in dataset:
@@ -98,10 +112,14 @@ def rest_sentence(dataset: List[dict], mapping: dict) -> Tuple[str, List[Tuple[i
     return res
     
 
-def union_dataset_stat(test_path: str, train_path: str) -> dict:
+def union_dataset_stat(test_path: str, dev_path: str, train_path: str) -> dict:
+    """
+    Calculates statistics on entities in union dataset 
+    """
+
     stat = defaultdict(set)
 
-    for path in [test_path, train_path]:
+    for path in [test_path, train_path, dev_path]:
         with open(path, "r") as f:
             dataset = json.load(f)
         
@@ -116,10 +134,24 @@ def union_dataset_stat(test_path: str, train_path: str) -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--mapper",
-        help="path to mapper json",
+        "atis",
+        help="path to atis dataset",
         type=str,
-        default="res/part_2/entities_map.json"
+    )
+    parser.add_argument(
+        "rest",
+        help="path to rest8k dataset",
+        type=str,
+    )
+    parser.add_argument(
+        "res",
+        help="path to results",
+        type=str,
+    )
+    parser.add_argument(
+        "mapper",
+        help="path to mapper for union entities",
+        type=str,
     )
     args = parser.parse_args()
 
@@ -129,39 +161,48 @@ if __name__ == "__main__":
     union_test, union_train = [], []
 
     # -----ATIS-----
-    with open("data/atis/test.json", "r") as f:
+    with open(os.path.join(args.atis, "test.json"), "r") as f:
         atis_test = json.load(f)
 
     atis_test = atis_test["rasa_nlu_data"]["common_examples"]
-    union_test += atis_sentence(atis_test, mapper["atis_entities_map"])
+    union_test += atis_sentences(atis_test, mapper["atis_entities_map"])
 
-    with open("data/atis/train.json", "r") as f:
+    with open(os.path.join(args.atis, "train.json"), "r") as f:
         atis_train = json.load(f)
 
     atis_train = atis_train["rasa_nlu_data"]["common_examples"]
-    union_train += atis_sentence(atis_train, mapper["atis_entities_map"])
+    union_train += atis_sentences(atis_train, mapper["atis_entities_map"])
 
     # ---------REST----------
-    with open("data/restaurant8k/test.json", "r") as f:
+    with open(os.path.join(args.rest, "test.json"), "r") as f:
         rest_test = json.load(f)
 
-    union_test += rest_sentence(rest_test, mapper["rest_entities_map"])
+    union_test += rest_sentences(rest_test, mapper["rest_entities_map"])
 
-    for path in glob.glob("data/restaurant8k/train_*.json"):
+    for path in glob.glob(os.path.join(args.rest, "train_*.json")):
         with open(path, "r") as f:
             rest_train = json.load(f)
 
-        union_train += rest_sentence(rest_train, mapper["rest_entities_map"])
+        union_train += rest_sentences(rest_train, mapper["rest_entities_map"])
+
+    
+    union_train, union_dev = train_test_split(union_train, test_size=0.1)
 
     # dump merged dataset
-    with open("res/part_2/union_test.json", "w") as f:
+    with open(os.path.join(args.res, "union_test.json"), "w") as f:
         json.dump(union_test, f, indent=4)
 
-    with open("res/part_2/union_train.json", "w") as f:
+    with open(os.path.join(args.res, "union_train.json"), "w") as f:
         json.dump(union_train, f, indent=4)
+    
+    with open(os.path.join(args.res, "union_dev.json"), "w") as f:
+        json.dump(union_dev, f, indent=4)
 
     # count stat on union dataset
-    with open("res/part_2/union_stat.json", "w") as f:
-        stat = union_dataset_stat("res/part_2/union_test.json",
-            "res/part_2/union_train.json")
+    with open(os.path.join(args.res, "union_stat.json"), "w") as f:
+        stat = union_dataset_stat(
+            test_path=os.path.join(args.res, "union_test.json"),
+            dev_path=os.path.join(args.res, "union_dev.json"),
+            train_path=os.path.join(args.res, "union_train.json")
+        )
         json.dump(stat, f, indent=4)

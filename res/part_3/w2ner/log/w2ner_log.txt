@@ -1,0 +1,334 @@
+2022-06-15 01:30:11 - INFO: 
++---------+-----------+----------+
+| example | sentences | entities |
++---------+-----------+----------+
+|  train  |   19072   |  24042   |
+|   dev   |    2120   |   2632   |
+|   test  |    4599   |   5468   |
++---------+-----------+----------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:30:31 - INFO: Building Model
+Downloading: 100% 413M/413M [00:07<00:00, 61.7MB/s]
+/usr/local/lib/python3.7/dist-packages/transformers/optimization.py:309: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
+2022-06-15 01:30:45 - INFO: Epoch: 0
+2022-06-15 01:34:35 - INFO: 
++---------+--------+--------+-----------+--------+
+| Train 0 |  Loss  |   F1   | Precision | Recall |
++---------+--------+--------+-----------+--------+
+|  Label  | 0.1068 | 0.5566 |   0.6325  | 0.5384 |
++---------+--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:34:41 - INFO: EVAL Label F1 [0.99869354 0.94736842 0.8971029  0.83486239 0.97282898 0.89461358
+ 0.91891892 0.89325843]
+2022-06-15 01:34:41 - INFO: 
++--------+--------+-----------+--------+
+| EVAL 0 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9197 |   0.8803  | 0.9645 |
+| Entity | 0.9222 |   0.8935  | 0.9529 |
++--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:34:55 - INFO: TEST Label F1 [0.99866238 0.95275591 0.90176991 0.85811674 0.95976447 0.88249634
+ 0.91299435 0.90448792]
+2022-06-15 01:34:55 - INFO: 
++--------+--------+-----------+--------+
+| TEST 0 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9214 |   0.8884  | 0.9582 |
+| Entity | 0.9156 |   0.8888  | 0.9440 |
++--------+--------+-----------+--------+
+2022-06-15 01:34:56 - INFO: Epoch: 1
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:38:52 - INFO: 
++---------+--------+--------+-----------+--------+
+| Train 1 |  Loss  |   F1   | Precision | Recall |
++---------+--------+--------+-----------+--------+
+|  Label  | 0.0083 | 0.9263 |   0.9279  | 0.9248 |
++---------+--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:38:58 - INFO: EVAL Label F1 [0.99940029 0.97270616 0.91685393 0.91762252 0.99189627 0.93119266
+ 0.96676737 0.97076023]
+2022-06-15 01:38:58 - INFO: 
++--------+--------+-----------+--------+
+| EVAL 1 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9584 |   0.9611  | 0.9580 |
+| Entity | 0.9530 |   0.9578  | 0.9483 |
++--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:39:11 - INFO: TEST Label F1 [0.99919556 0.96887409 0.90989226 0.91698113 0.98082011 0.90814394
+ 0.96068796 0.96407879]
+2022-06-15 01:39:11 - INFO: 
++--------+--------+-----------+--------+
+| TEST 1 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9511 |   0.9486  | 0.9559 |
+| Entity | 0.9402 |   0.9407  | 0.9396 |
++--------+--------+-----------+--------+
+2022-06-15 01:39:13 - INFO: Epoch: 2
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:43:06 - INFO: 
++---------+--------+--------+-----------+--------+
+| Train 2 |  Loss  |   F1   | Precision | Recall |
++---------+--------+--------+-----------+--------+
+|  Label  | 0.0049 | 0.9550 |   0.9530  | 0.9571 |
++---------+--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:43:12 - INFO: EVAL Label F1 [0.99951926 0.97824195 0.95129534 0.92202729 0.9940444  0.93365501
+ 0.9740634  0.97859327]
+2022-06-15 01:43:12 - INFO: 
++--------+--------+-----------+--------+
+| EVAL 2 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9664 |   0.9566  | 0.9770 |
+| Entity | 0.9648 |   0.9553  | 0.9745 |
++--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:43:25 - INFO: TEST Label F1 [0.99942913 0.97630939 0.95238095 0.93033708 0.98765432 0.92261307
+ 0.9497076  0.95169082]
+2022-06-15 01:43:25 - INFO: 
++--------+--------+-----------+--------+
+| TEST 2 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9588 |   0.9477  | 0.9708 |
+| Entity | 0.9557 |   0.9461  | 0.9656 |
++--------+--------+-----------+--------+
+2022-06-15 01:43:27 - INFO: Epoch: 3
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:47:18 - INFO: 
++---------+--------+--------+-----------+--------+
+| Train 3 |  Loss  |   F1   | Precision | Recall |
++---------+--------+--------+-----------+--------+
+|  Label  | 0.0037 | 0.9648 |   0.9631  | 0.9666 |
++---------+--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:47:25 - INFO: EVAL Label F1 [0.99964058 0.98589065 0.96133751 0.93532338 0.9951325  0.94497608
+ 0.97391304 0.97546012]
+2022-06-15 01:47:25 - INFO: 
++--------+--------+-----------+--------+
+| EVAL 3 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9715 |   0.9662  | 0.9771 |
+| Entity | 0.9698 |   0.9629  | 0.9768 |
++--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:47:38 - INFO: TEST Label F1 [0.99948041 0.97952307 0.95795247 0.92698413 0.9873502  0.93006993
+ 0.95438596 0.94787879]
+2022-06-15 01:47:38 - INFO: 
++--------+--------+-----------+--------+
+| TEST 3 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9605 |   0.9521  | 0.9696 |
+| Entity | 0.9550 |   0.9466  | 0.9634 |
++--------+--------+-----------+--------+
+2022-06-15 01:47:40 - INFO: Epoch: 4
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:51:33 - INFO: 
++---------+--------+--------+-----------+--------+
+| Train 4 |  Loss  |   F1   | Precision | Recall |
++---------+--------+--------+-----------+--------+
+|  Label  | 0.0027 | 0.9732 |   0.9713  | 0.9751 |
++---------+--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:51:39 - INFO: EVAL Label F1 [0.99962324 0.98195576 0.96125654 0.93046033 0.995671   0.95214724
+ 0.98525074 0.98802395]
+2022-06-15 01:51:39 - INFO: 
++--------+--------+-----------+--------+
+| EVAL 4 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9743 |   0.9685  | 0.9805 |
+| Entity | 0.9709 |   0.9647  | 0.9772 |
++--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:51:53 - INFO: TEST Label F1 [0.99946971 0.9781491  0.95425435 0.9254797  0.99165832 0.92237443
+ 0.96459096 0.96184971]
+2022-06-15 01:51:53 - INFO: 
++--------+--------+-----------+--------+
+| TEST 4 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9622 |   0.9524  | 0.9725 |
+| Entity | 0.9567 |   0.9483  | 0.9653 |
++--------+--------+-----------+--------+
+2022-06-15 01:51:54 - INFO: Epoch: 5
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:55:46 - INFO: 
++---------+--------+--------+-----------+--------+
+| Train 5 |  Loss  |   F1   | Precision | Recall |
++---------+--------+--------+-----------+--------+
+|  Label  | 0.0020 | 0.9773 |   0.9758  | 0.9789 |
++---------+--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:55:53 - INFO: EVAL Label F1 [0.99974886 0.98968464 0.97239915 0.9534413  0.99728997 0.94976077
+ 0.98245614 0.98802395]
+2022-06-15 01:55:53 - INFO: 
++--------+--------+-----------+--------+
+| EVAL 5 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9791 |   0.9762  | 0.9821 |
+| Entity | 0.9759 |   0.9732  | 0.9787 |
++--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:56:06 - INFO: TEST Label F1 [0.99955087 0.98166211 0.96103896 0.94669118 0.99133911 0.93101737
+ 0.96642686 0.96348645]
+2022-06-15 01:56:06 - INFO: 
++--------+--------+-----------+--------+
+| TEST 5 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9677 |   0.9615  | 0.9741 |
+| Entity | 0.9624 |   0.9576  | 0.9673 |
++--------+--------+-----------+--------+
+2022-06-15 01:56:07 - INFO: Epoch: 6
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 01:59:56 - INFO: 
++---------+--------+--------+-----------+--------+
+| Train 6 |  Loss  |   F1   | Precision | Recall |
++---------+--------+--------+-----------+--------+
+|  Label  | 0.0017 | 0.9819 |   0.9805  | 0.9834 |
++---------+--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:00:02 - INFO: EVAL Label F1 [0.99974886 0.98969072 0.97360084 0.94768016 0.995671   0.95061728
+ 0.98823529 0.99093656]
+2022-06-15 02:00:02 - INFO: 
++--------+--------+-----------+--------+
+| EVAL 6 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9795 |   0.9784  | 0.9809 |
+| Entity | 0.9758 |   0.9728  | 0.9787 |
++--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:00:14 - INFO: TEST Label F1 [0.99957219 0.98173812 0.96640589 0.9368231  0.992      0.93039918
+ 0.96278511 0.96462264]
+2022-06-15 02:00:14 - INFO: 
++--------+--------+-----------+--------+
+| TEST 6 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9668 |   0.9609  | 0.9729 |
+| Entity | 0.9612 |   0.9555  | 0.9669 |
++--------+--------+-----------+--------+
+2022-06-15 02:00:14 - INFO: Epoch: 7
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:04:02 - INFO: 
++---------+--------+--------+-----------+--------+
+| Train 7 |  Loss  |   F1   | Precision | Recall |
++---------+--------+--------+-----------+--------+
+|  Label  | 0.0013 | 0.9849 |   0.9835  | 0.9864 |
++---------+--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:04:08 - INFO: EVAL Label F1 [0.99977701 0.99115566 0.97777778 0.95409182 0.99621007 0.95493301
+ 0.98245614 0.98170732]
+2022-06-15 02:04:08 - INFO: 
++--------+--------+-----------+--------+
+| EVAL 7 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9798 |   0.9791  | 0.9806 |
+| Entity | 0.9767 |   0.9739  | 0.9795 |
++--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:04:20 - INFO: TEST Label F1 [0.99957646 0.98275191 0.96279283 0.94209559 0.99266177 0.92839259
+ 0.96181384 0.96445498]
+2022-06-15 02:04:20 - INFO: 
++--------+--------+-----------+--------+
+| TEST 7 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9668 |   0.9605  | 0.9734 |
+| Entity | 0.9618 |   0.9561  | 0.9676 |
++--------+--------+-----------+--------+
+2022-06-15 02:04:22 - INFO: Epoch: 8
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:08:11 - INFO: 
++---------+--------+--------+-----------+--------+
+| Train 8 |  Loss  |   F1   | Precision | Recall |
++---------+--------+--------+-----------+--------+
+|  Label  | 0.0011 | 0.9857 |   0.9845  | 0.9870 |
++---------+--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:08:18 - INFO: EVAL Label F1 [0.999777   0.99029126 0.97463002 0.96088265 0.995671   0.95641646
+ 0.98823529 0.99099099]
+2022-06-15 02:08:18 - INFO: 
++--------+--------+-----------+--------+
+| EVAL 8 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9821 |   0.9797  | 0.9846 |
+| Entity | 0.9788 |   0.9755  | 0.9821 |
++--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:08:31 - INFO: TEST Label F1 [0.99957538 0.98268286 0.96631287 0.94567219 0.992      0.92882031
+ 0.96278511 0.96600234]
+2022-06-15 02:08:31 - INFO: 
++--------+--------+-----------+--------+
+| TEST 8 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9680 |   0.9607  | 0.9756 |
+| Entity | 0.9630 |   0.9559  | 0.9702 |
++--------+--------+-----------+--------+
+2022-06-15 02:08:33 - INFO: Epoch: 9
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:12:26 - INFO: 
++---------+--------+--------+-----------+--------+
+| Train 9 |  Loss  |   F1   | Precision | Recall |
++---------+--------+--------+-----------+--------+
+|  Label  | 0.0009 | 0.9879 |   0.9868  | 0.9890 |
++---------+--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:12:33 - INFO: EVAL Label F1 [0.9997835  0.99115566 0.97463002 0.96072508 0.99674973 0.95652174
+ 0.98823529 0.99093656]
+2022-06-15 02:12:33 - INFO: 
++--------+--------+-----------+--------+
+| EVAL 9 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9823 |   0.9812  | 0.9835 |
+| Entity | 0.9795 |   0.9769  | 0.9821 |
++--------+--------+-----------+--------+
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:12:45 - INFO: TEST Label F1 [0.99958393 0.98263349 0.96640589 0.94649446 0.99233078 0.93020937
+ 0.96526946 0.96576151]
+2022-06-15 02:12:45 - INFO: 
++--------+--------+-----------+--------+
+| TEST 9 |   F1   | Precision | Recall |
++--------+--------+-----------+--------+
+| Label  | 0.9686 |   0.9623  | 0.9752 |
+| Entity | 0.9637 |   0.9576  | 0.9698 |
++--------+--------+-----------+--------+
+2022-06-15 02:12:47 - INFO: Best DEV F1: 0.9795
+2022-06-15 02:12:47 - INFO: Best TEST F1: 0.9637
+/usr/local/lib/python3.7/dist-packages/torch/utils/data/dataloader.py:490: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  cpuset_checked))
+2022-06-15 02:13:00 - INFO: TEST Label F1 [0.99958393 0.98263349 0.96640589 0.94649446 0.99233078 0.93020937
+ 0.96526946 0.96576151]
+2022-06-15 02:13:00 - INFO: 
++------------+--------+-----------+--------+
+| TEST Final |   F1   | Precision | Recall |
++------------+--------+-----------+--------+
+|   Label    | 0.9686 |   0.9623  | 0.9752 |
+|   Entity   | 0.9637 |   0.9576  | 0.9698 |
