@@ -1,16 +1,9 @@
-from flair.data import Corpus
-from flair.datasets import ColumnCorpus
-from flair.embeddings import WordEmbeddings, FlairEmbeddings, StackedEmbeddings
-from flair.models import SequenceTagger
-from flair.trainers import ModelTrainer
 import json
 import spacy
 import os
 import seaborn as sns
 import matplotlib.pyplot as plt
 import argparse
-
-from sympy import arg
 
 
 def create_w2ner_dataset(test_path: str, train_path: str, dev_path: str, save_dir: str) -> Corpus:
